@@ -18,6 +18,7 @@ fetch(jsonUrl, { method: 'get' })
         renderContent(jsonData, 1);
     })
 
+//render選單
 let renderSelect = (jsonData) => {
     let noRepeat = [];
     jsonData.forEach((items) => {
@@ -34,6 +35,7 @@ let renderSelect = (jsonData) => {
     select.innerHTML = str;
 }
 
+//render內容
 let renderContent = (jsonData, nowPage) => {
     const dataTotal = jsonData.length;
     const perPage = 6;
@@ -61,6 +63,8 @@ let renderContent = (jsonData, nowPage) => {
     pageBtn(page);
 }
 
+
+//呈現
 let displayData = (data) => {
     let str = '';
     data.forEach((item) => {
@@ -84,6 +88,7 @@ let displayData = (data) => {
     card.innerHTML = str;
 }
 
+//分頁
 let pageBtn = (page) => {
     let str = '';
     const total = page.pageTotal;
@@ -114,6 +119,7 @@ let pageBtn = (page) => {
 }
 
 
+//監聽選單
 select.addEventListener('change', (e) => {
     let location = '';
     let selectItem = [];
@@ -127,6 +133,8 @@ select.addEventListener('change', (e) => {
     renderContent(selectItem, 1);
 });
 
+
+//監聽熱門推薦
 btn.addEventListener('click', (e) => {
     let location = '';
     let hotItem = [];
@@ -140,6 +148,7 @@ btn.addEventListener('click', (e) => {
     renderContent(hotItem, 1);
 });
 
+//監聽分頁
 pagination.addEventListener('click', (e) => {
     e.preventDefault();
     if (e.target.nodeName !== 'A') return;
