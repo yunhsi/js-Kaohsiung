@@ -1,0 +1,450 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 微軟正黑體;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+html,body{
+  width: 100%;
+}
+
+/* header */
+
+.header {
+  background-image: url(https://hexschool.github.io/JavaScript_HomeWork/assets/the-urban-landscape-1698285.png);
+  background-size: cover;
+  background-position: top;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 70px 0;
+}
+
+h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+select {
+  font-size: 20px;
+  border: 3px solid #fff;
+  width: 420px;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 40px;
+}
+
+/* content */
+
+.content {
+  min-height: calc(70vh - 90px);
+}
+
+.recommended {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recommended h3 {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.recommended ul {
+  display: flex;
+  justify-content: center;
+}
+
+.recommended button {
+  padding: 10px 30px;
+  font-size: 20px;
+  border: 0;
+  color: #fff;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+hr {
+  margin-top: 30px;
+  border: 1px dashed #559ac8;
+}
+
+.icon {
+  margin: 0 auto;
+  color: #559ac8;
+  border: 3px solid;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  position: relative;
+  top: -25px;
+}
+
+.fa-sort-down {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  top: -5px;
+  left: 5px;
+}
+
+/* footer */
+
+.footer {
+  height: 90px;
+  background-color: #559ac8;
+}
+
+h4 {
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+p {
+  color: #ffd366;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* content-change */
+
+article {
+  margin: 30px 0;
+}
+
+.administrative-title {
+  margin-bottom: 25px;
+  font-size: 36px;
+  color: #8a82cc;
+  text-align: center;
+}
+
+.administrative-cards {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.administrative-cards .model-card {
+  /* width: 464px; */
+  width: calc(94% / 2);
+  /* height: 273px; */
+  border-radius: 5px;
+  margin-bottom: 36px;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.2s ease-in;
+}
+
+.model-card:hover {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-top {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.2s ease-in;
+}
+
+.model-card:hover .card-top {
+  filter: grayscale(0.5);
+}
+
+.card-top h3,
+.card-top h5 {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+}
+
+.card-top h3 {
+  left: 20px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card-top h5 {
+  right: 20px;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card-bottom {
+  list-style: none;
+  padding-left: 23px;
+  margin: 20px 0;
+}
+
+.card-bottom li {
+  margin-bottom: 16px;
+}
+
+.card-bottom .time {
+  background-image: url("assets/icons_clock.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+}
+
+.card-bottom .location {
+  background-image: url("assets/icons_pin.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+}
+
+.card-bottom .phoneTag {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-bottom .phoneTag .phone {
+  min-width: 140px;
+  background-image: url("assets/icons_phone.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+}
+
+.card-bottom .phoneTag .tag {
+  background-image: url("assets/icons_tag.png");
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  padding: 5px;
+}
+
+.pagination li:first-child,
+.pagination li:last-child {
+  width: 50px;
+  height: 30px;
+}
+
+.pagination a {
+  color: #535353;
+}
+
+.pagination a:hover,
+.pagination .active{
+  text-shadow: 1px 1px 10px #559ac8;
+}
+
+.pagination li.disable {
+  color: #bebebe;
+}
+
+.btn-goTop {
+  position: fixed;
+  right: 80px;
+  bottom: 100px;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-image: url("assets/btn_goTop.png");
+}
+@media screen and (max-width: 1024px) {
+  .btn-goTop{
+    right: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header{
+    width: 100%;
+  }
+  select {
+    width: 80%;
+    padding: 5px;
+  }
+  .recommended button {
+    width: 45%;
+  }
+  .administrative-cards .model-card {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+  .btn-goTop{
+    right: 20px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .btn-goTop{
+    right: 10px;
+    bottom: 50px;
+  }
+  .recommended button {
+    padding: 15px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  .administrative-cards .model-card {
+    font-size: 14px;
+  }
+}
